@@ -15,7 +15,13 @@ const Todo = () => {
     }
 
     const ajouter =()=>{
-        console.log("test console.log")
+        console.log("test console.log", tasks.length),
+
+        setTasks([...tasks,
+
+            {id:tasks.length+1,
+            tache:"Salut"
+        }])
       }
 
   return (

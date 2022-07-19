@@ -15,26 +15,28 @@ import Todo from './components/Hook/Todo'
 
 const App = () => {
   return (
-    <View>
-      <Todo/>
-    </View>
 
-  // <SafeAreaView style={{flex:1}}>
+
+  <SafeAreaView style={{flex:1}}>
     
-  //   <FlatList
-  //     data={jours}
-  //     renderItem={({item})=><JourDeLaSemaine jour={item.jour}/>}
-  //     keyExtractor={(item) => item.id}
+    <FlatList
+      data={jours}
+      renderItem={({item})=><JourDeLaSemaine jour={item.jour}/>}
+      keyExtractor={(item) => item.id}
 
-  //   />
+    />
 
-  //   <FlatList
-  //         data={stagiaires}
-  //         renderItem={({item})=><AfficheStagiaires nom={item.nom} prenom={item.prenom}/>}
-  //         keyExtractor={(item) => item.id}
+    <FlatList
+          data={stagiaires}
+          renderItem={({item})=><AfficheStagiaires nom={item.nom} prenom={item.prenom}/>}
+          keyExtractor={(item) => item.id}
 
-  //       />
-  //   </SafeAreaView>
+        />
+
+      <View>
+        <Todo/>
+      </View>
+    </SafeAreaView>
 
   )
 }

@@ -1,4 +1,4 @@
-import { SafeAreaView, StyleSheet, Text, View, FlatList } from 'react-native'
+import { SafeAreaView, StyleSheet, Text, View, FlatList, Button } from 'react-native'
 import React, { useState } from 'react';
 import AfficheTodo from '../AfficheTodo'
 
@@ -9,12 +9,26 @@ const initTask = [
 
 const Todo = () => {
     const [ tasks, setTasks]=useState(initTask)
+
+    const HeaderTodo=()=>{
+        return (<Text>Message</Text>)
+    }
+
+    const ajouter =()=>{
+        console.log("test console.log")
+      }
+
   return (
     <SafeAreaView>
+        <Button
+        title="Ajouter"
+        onPress={(ajouter)}
+      />
         <FlatList
         data={tasks}
         renderItem={({item})=><Text>{item.tache}</Text>}
         keyExtractor={item => item.id}
+        ListHeaderComponent={HeaderTodo}
       />
     </SafeAreaView>
   )

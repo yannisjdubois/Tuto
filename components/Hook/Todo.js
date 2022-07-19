@@ -17,7 +17,7 @@ const Todo = () => {
             <View>
                 <TextInput
                     style={styles.input}
-                    onChangeText={setText}
+                    onChange={setText}
                     value={valText}
                 />
                 <Button
